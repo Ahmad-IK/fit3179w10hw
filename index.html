@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change Visualisations</title>
+    
+    <!-- Include the Vega and Vega-Lite libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <h1>Climate Change Visualisations</h1>
+    
+    <div style="display: flex; justify-content: space-between;">
+        <div id="leftVegaLite" style="width: 45%;"></div>        
+        <div id="rightVegaLite" style="width: 45%;"></div>
+    </div>
+
+    <script>
+        var tempMapVis = "choropleth_map.vg.json";
+        var emissionBarChart = "emissions.vg.json";
+
+        vegaEmbed("#leftVegaLite", tempMapVis).then(result => {
+        });
+        vegaEmbed("#rightVegaLite", emissionBarChart).then(result => {
+        });
+    </script>
+</body>
+</html>
